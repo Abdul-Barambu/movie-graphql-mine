@@ -1,0 +1,20 @@
+type Query{
+getAllMoviesHandler: [MineMovie]
+}
+
+type MineMovie{
+id: ID!
+movieName: String!
+studio: String!
+mine_cast: [String]!
+}
+
+type Mutation{
+    addMovieHandler(mineInput: MineInput): MineMovie
+}
+
+input MineInput{
+    movieName: String!
+    studio: String!
+    mine_cast: [String]!
+}
