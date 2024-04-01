@@ -28,4 +28,14 @@ public class MineController {
         return mineService.addMovie(mineInput);
     }
 
+    @MutationMapping
+    MineMovie updateMovieHandler(@Argument Integer id, @Argument MineInput mineInput){
+        return mineService.updateMovie(id, mineInput);
+    }
+
+    @MutationMapping
+    String deleteMovieHandler(@Argument Integer id){
+        return mineService.deleteMovie(id);
+    }
+
 }

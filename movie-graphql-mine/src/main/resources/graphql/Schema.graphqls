@@ -11,10 +11,12 @@ mine_cast: [String]!
 
 type Mutation{
     addMovieHandler(mineInput: MineInput): MineMovie
+    updateMovieHandler(id: Int, mineInput: MineInput): MineMovie
+    deleteMovieHandler(id: Int): String
 }
 
 input MineInput{
-    movieName: String!
-    studio: String!
-    mine_cast: [String]!
+    movieName: String
+    studio: String
+    mine_cast: [String]
 }
